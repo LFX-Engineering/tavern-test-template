@@ -15,6 +15,12 @@ virtualenv .venv
 pip3 install -r requirements.txt
 ```
 
+## Write Tests!
+
+1. review the `tests/` folder.
+1. for each YAML file, open and review the instructions
+1. once done editing the Tavern tests, run the tests to see if they all pass
+
 ## Running
 
 To run the tests:
