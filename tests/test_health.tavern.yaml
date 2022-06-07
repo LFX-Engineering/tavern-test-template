@@ -8,6 +8,8 @@ stages:
   - name: Expect 200 Response
   # TODO: query the Health and Status Endpoint for LFX Security
   # 1. Make a GET request, API endpoint: https://api-gw.dev.platform.linuxfoundation.org/security-service/v2/health
+  #    a. swagger specification: https://api-gw.dev.platform.linuxfoundation.org/security-service/v2/api-docs#operation/getHealth
+  #    b. open API endpoint in the browser will show the response JSON
   # 2. Check the response code
   # 3. Confirm the response content-type is application/json
   # 4. Evaluate the response payload, write test logic to ensure the response is considered healthy (look at API response model/example to determine what would be considered good/valid)
