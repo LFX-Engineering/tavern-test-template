@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore Allure Report output folder
+allure-reports/
+allure_reports/
