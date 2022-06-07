@@ -2,7 +2,7 @@
 # Copyright The Linux Foundation and each contributor to LFX.
 # SPDX-License-Identifier: MIT
 
-test_name: Health Status Check
+test_name: LFX Security API - Health Status Check
 
 stages:
   - name: Expect 200 Response
@@ -10,7 +10,13 @@ stages:
   # 1. Make a GET request, API endpoint: https://api-gw.dev.platform.linuxfoundation.org/security-service/v2/health
   #    a. swagger specification: https://api-gw.dev.platform.linuxfoundation.org/security-service/v2/api-docs#operation/getHealth
   #    b. open API endpoint in the browser will show the response JSON
-  # 2. Check the response code
+  # 2. Check the response code (see API spec for expected response code
+  #    a. run the test before moving to the next step
   # 3. Confirm the response content-type is application/json
-  # 4. Evaluate the response payload, write test logic to ensure the response is considered healthy (look at API response model/example to determine what would be considered good/valid)
-  # 5. Run the test to ensure it works
+  #    a. run the test before moving to the next step
+  # 4. Confirm the API is returning the correct schema (hint: consider using `tavern.testutils.helpers:validate_pykwalify`)
+  #    a. run the test before moving to the next step
+  # 5. Confirm the API is returning proper values (hint: consider writing a simple python data validator).
+  #    a. Does the API response return `"status":"healthy"`?
+  #    b. Does the API response return `"healthy":true` for each item in the list?
+  #    c. run the test before moving to the next step
